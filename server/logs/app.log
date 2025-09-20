@@ -1,0 +1,660 @@
+2025-09-18T00:07:21.431+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T00:07:21.783+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=156715291, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c47ea02faf44b784615ca7, counter=4}, lastWriteDate=Thu Sep 18 00:07:21 IST 2025, lastUpdateTimeNanos=201755281110333}
+2025-09-18T00:07:25.861+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T00:07:25.930+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T00:07:26.232+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=164447916, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c4845195a122193c3f5e09, counter=3}, lastWriteDate=Thu Sep 18 00:07:26 IST 2025, lastUpdateTimeNanos=201759730200083}
+2025-09-18T00:07:26.343+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=175858291, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000021b, setVersion=202, topologyVersion=TopologyVersion{processId=68c481394361d86a0cb7f6e1, counter=6}, lastWriteDate=Thu Sep 18 00:07:26 IST 2025, lastUpdateTimeNanos=201759841393125}
+2025-09-18T00:07:26.343+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017 with max election id 7fffffff000000000000021b and max set version 202
+2025-09-18T00:08:11.277+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T00:08:11.464+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=120926375, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000021b, setVersion=202, topologyVersion=TopologyVersion{processId=68c481394361d86a0cb7f6e1, counter=6}, lastWriteDate=Thu Sep 18 00:08:11 IST 2025, lastUpdateTimeNanos=201780032266666}
+2025-09-18T00:08:11.465+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017 with max election id 7fffffff000000000000021b and max set version 202
+2025-09-18T00:24:21.270+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T00:24:21.450+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=124403166, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c4845195a122193c3f5e09, counter=3}, lastWriteDate=Thu Sep 18 00:24:21 IST 2025, lastUpdateTimeNanos=201825188813041}
+2025-09-18T00:24:26.457+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T00:24:26.629+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=110368250, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000021b, setVersion=202, topologyVersion=TopologyVersion{processId=68c481394361d86a0cb7f6e1, counter=6}, lastWriteDate=Thu Sep 18 00:24:26 IST 2025, lastUpdateTimeNanos=201830368127833}
+2025-09-18T00:24:26.630+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017 with max election id 7fffffff000000000000021b and max set version 202
+2025-09-18T00:24:26.795+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T00:24:27.206+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=232207625, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c47ea02faf44b784615ca7, counter=4}, lastWriteDate=Thu Sep 18 00:24:27 IST 2025, lastUpdateTimeNanos=201830944977166}
+2025-09-18T01:06:18.374+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T01:06:18.809+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=218976250, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c4845195a122193c3f5e09, counter=3}, lastWriteDate=Thu Sep 18 01:06:18 IST 2025, lastUpdateTimeNanos=204317625078125}
+2025-09-18T01:22:33.747+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T01:22:33.828+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T01:22:33.973+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=172326125, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000021b, setVersion=202, topologyVersion=TopologyVersion{processId=68c481394361d86a0cb7f6e1, counter=6}, lastWriteDate=Thu Sep 18 01:22:33 IST 2025, lastUpdateTimeNanos=204367859834041}
+2025-09-18T01:22:33.974+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017 with max election id 7fffffff000000000000021b and max set version 202
+2025-09-18T01:22:34.062+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=177149792, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c4845195a122193c3f5e09, counter=3}, lastWriteDate=Thu Sep 18 01:22:33 IST 2025, lastUpdateTimeNanos=204367949090208}
+2025-09-18T01:22:34.242+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T01:22:34.463+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=164946542, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c47ea02faf44b784615ca7, counter=4}, lastWriteDate=Thu Sep 18 01:22:34 IST 2025, lastUpdateTimeNanos=204368349540833}
+2025-09-18T01:43:19.413+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T01:43:19.413+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T01:43:19.661+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=166476500, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c4845195a122193c3f5e09, counter=3}, lastWriteDate=Thu Sep 18 01:43:19 IST 2025, lastUpdateTimeNanos=204688522056375}
+2025-09-18T01:43:19.673+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=173376500, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000021b, setVersion=202, topologyVersion=TopologyVersion{processId=68c481394361d86a0cb7f6e1, counter=6}, lastWriteDate=Thu Sep 18 01:43:19 IST 2025, lastUpdateTimeNanos=204688533669250}
+2025-09-18T01:43:19.673+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017 with max election id 7fffffff000000000000021b and max set version 202
+2025-09-18T01:43:19.919+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T01:43:20.153+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=183864875, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c47ea02faf44b784615ca7, counter=4}, lastWriteDate=Thu Sep 18 01:43:20 IST 2025, lastUpdateTimeNanos=204689013517500}
+2025-09-18T02:01:14.336+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T02:01:14.336+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T02:01:14.571+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=138726875, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000021b, setVersion=202, topologyVersion=TopologyVersion{processId=68c481394361d86a0cb7f6e1, counter=6}, lastWriteDate=Thu Sep 18 02:01:14 IST 2025, lastUpdateTimeNanos=204839012866000}
+2025-09-18T02:01:14.572+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017 with max election id 7fffffff000000000000021b and max set version 202
+2025-09-18T02:01:14.586+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=154220875, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c4845195a122193c3f5e09, counter=3}, lastWriteDate=Thu Sep 18 02:01:14 IST 2025, lastUpdateTimeNanos=204839028356958}
+2025-09-18T02:01:14.848+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T02:01:15.162+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=122365541, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c47ea02faf44b784615ca7, counter=4}, lastWriteDate=Thu Sep 18 02:01:15 IST 2025, lastUpdateTimeNanos=204839604388583}
+2025-09-18T02:08:24.275+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T02:08:24.310+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T02:08:24.444+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=117436000, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000021b, setVersion=202, topologyVersion=TopologyVersion{processId=68c481394361d86a0cb7f6e1, counter=6}, lastWriteDate=Thu Sep 18 02:08:24 IST 2025, lastUpdateTimeNanos=204909281854708}
+2025-09-18T02:08:24.445+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017 with max election id 7fffffff000000000000021b and max set version 202
+2025-09-18T02:08:24.491+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=123829583, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c4845195a122193c3f5e09, counter=3}, lastWriteDate=Thu Sep 18 02:08:24 IST 2025, lastUpdateTimeNanos=204909328497291}
+2025-09-18T02:08:24.885+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T02:08:25.087+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=120121625, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c47ea02faf44b784615ca7, counter=4}, lastWriteDate=Thu Sep 18 02:08:25 IST 2025, lastUpdateTimeNanos=204909924677833}
+2025-09-18T02:12:29.422+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T02:12:29.428+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T02:12:29.591+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=117637166, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000021b, setVersion=202, topologyVersion=TopologyVersion{processId=68c481394361d86a0cb7f6e1, counter=6}, lastWriteDate=Thu Sep 18 02:12:29 IST 2025, lastUpdateTimeNanos=204959569387041}
+2025-09-18T02:12:29.592+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017 with max election id 7fffffff000000000000021b and max set version 202
+2025-09-18T02:12:29.611+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=123806000, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c4845195a122193c3f5e09, counter=3}, lastWriteDate=Thu Sep 18 02:12:29 IST 2025, lastUpdateTimeNanos=204959589109333}
+2025-09-18T02:12:30.025+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:819) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:807) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:857) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.1.jar:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1116) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1103) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.5.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.5.1.jar:na]
+	... 4 common frames omitted
+
+2025-09-18T02:12:30.206+05:30  INFO 68262 --- [ecommerce-app] [cluster-ClusterId{value='68caf2be5589a96a0017941b', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=127343750, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c47ea02faf44b784615ca7, counter=4}, lastWriteDate=Thu Sep 18 02:12:30 IST 2025, lastUpdateTimeNanos=204960184027916}
+2025-09-18T02:19:59.559+05:30  INFO 68262 --- [ecommerce-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T02:19:59.569+05:30  INFO 68262 --- [ecommerce-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T16:10:12.511+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] c.m.e.EcommerceAppApplication            : Starting EcommerceAppApplication using Java 23.0.2 with PID 71833 (/Users/swapnam/Desktop/trainings/NIE/Ecom-NIE-main/server/target/classes started by swapnam in /Users/swapnam/Desktop/trainings/NIE/Ecom-NIE-main/server)
+2025-09-18T16:10:12.519+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] c.m.e.EcommerceAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T16:10:12.549+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-18T16:10:12.549+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-18T16:10:12.871+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2025-09-18T16:10:12.891+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 3 MongoDB repository interfaces.
+2025-09-18T16:10:13.062+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T16:10:13.080+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T16:10:13.081+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T16:10:13.096+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-18T16:10:13.096+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 547 ms
+2025-09-18T16:10:14.174+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.1"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "aarch64", "version": "14.3.1"}, "platform": "Java/Homebrew/23.0.2"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='myuser', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@53c58359, com.mongodb.Jep395RecordCodecProvider@39e78f9f, com.mongodb.KotlinCodecProvider@5ea457c6]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.4s8bswq.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-hw7c96-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-09-18T16:10:14.717+05:30  INFO 71833 --- [ecommerce-app] [cluster-ClusterId{value='68cbe18e86bcdfacee044d22', description='null'}-srv-cluster0.4s8bswq.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017 to client view of cluster
+2025-09-18T16:10:14.728+05:30  INFO 71833 --- [ecommerce-app] [cluster-ClusterId{value='68cbe18e86bcdfacee044d22', description='null'}-srv-cluster0.4s8bswq.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017 to client view of cluster
+2025-09-18T16:10:14.730+05:30  INFO 71833 --- [ecommerce-app] [cluster-ClusterId{value='68cbe18e86bcdfacee044d22', description='null'}-srv-cluster0.4s8bswq.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017 to client view of cluster
+2025-09-18T16:10:14.735+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T16:10:14.874+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-09-18T16:10:15.007+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-18T16:10:15.012+05:30  INFO 71833 --- [ecommerce-app] [restartedMain] c.m.e.EcommerceAppApplication            : Started EcommerceAppApplication in 2.724 seconds (process running for 2.918)
+2025-09-18T16:10:15.638+05:30  INFO 71833 --- [ecommerce-app] [cluster-ClusterId{value='68cbe18e86bcdfacee044d22', description='null'}-ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=580199541, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c47ea02faf44b784615ca7, counter=4}, lastWriteDate=Thu Sep 18 16:10:15 IST 2025, lastUpdateTimeNanos=229071123633833}
+2025-09-18T16:10:15.638+05:30  INFO 71833 --- [ecommerce-app] [cluster-ClusterId{value='68cbe18e86bcdfacee044d22', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=583366000, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000021b, setVersion=202, topologyVersion=TopologyVersion{processId=68c481394361d86a0cb7f6e1, counter=6}, lastWriteDate=Thu Sep 18 16:10:15 IST 2025, lastUpdateTimeNanos=229071123633708}
+2025-09-18T16:10:15.638+05:30  INFO 71833 --- [ecommerce-app] [cluster-ClusterId{value='68cbe18e86bcdfacee044d22', description='null'}-ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=583367042, minRoundTripTimeNanos=0, setName='atlas-hw7c96-shard-0', canonicalAddress=ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017, hosts=[ac-tz5q17f-shard-00-00.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017, ac-tz5q17f-shard-00-02.4s8bswq.mongodb.net:27017], passives=[], arbiters=[], primary='ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=202, topologyVersion=TopologyVersion{processId=68c4845195a122193c3f5e09, counter=3}, lastWriteDate=Thu Sep 18 16:10:15 IST 2025, lastUpdateTimeNanos=229071123633833}
+2025-09-18T16:10:15.640+05:30  INFO 71833 --- [ecommerce-app] [cluster-ClusterId{value='68cbe18e86bcdfacee044d22', description='null'}-ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-tz5q17f-shard-00-01.4s8bswq.mongodb.net:27017 with max election id 7fffffff000000000000021b and max set version 202
+2025-09-18T16:12:15.755+05:30  INFO 71833 --- [ecommerce-app] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-18T16:12:15.756+05:30  INFO 71833 --- [ecommerce-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-18T16:12:15.758+05:30  INFO 71833 --- [ecommerce-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-09-18T16:13:13.087+05:30  WARN 71833 --- [ecommerce-app] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.mtd.ecommerce_app.enums.Category` from String "electronics": not one of the values accepted for Enum class: [FASHION, FURNITURE, ELECTRONICS, HOME]]
+2025-09-18T16:13:50.178+05:30  INFO 71833 --- [ecommerce-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T16:13:50.186+05:30  INFO 71833 --- [ecommerce-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
